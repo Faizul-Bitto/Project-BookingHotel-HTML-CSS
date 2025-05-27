@@ -23,11 +23,11 @@ body {
 /*! Navbar Section */
 .hero .navbar {
   position: absolute;
-  top: 2rem;
+  top: 3.5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 81%;
-  height: 4rem;
+  height: 5rem;
   background-color: white;
   border-radius: 1rem;
   z-index: 100;
@@ -66,7 +66,7 @@ body {
   display: flex;
   justify-content: center;
   color: #262626;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .hero .navbar .nav-links .link .logo .logo-icon {
@@ -92,3 +92,147 @@ body {
 }
 
 /*! Book a Room Section */
+.book {
+  max-width: 75%;
+  margin: 10rem auto;
+}
+
+.book .book-room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 5rem 0;
+}
+
+.book .book-room h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.book .book-room p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5e5e5e;
+}
+
+.book .book-room-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.book .book-room-contents .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book .book-room-contents .content .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  text-align: start;
+}
+
+.book .book-room-contents .content .adults-children {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.book .book-room-contents .content .adults-children .adults-children-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.book .book-room-contents .content .book-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #65aef2;
+  color: white;
+}
+
+.book .book-room-contents .content .book-now h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.book .book-room-contents .content:hover {
+  transform: scale(1.1);
+}
+
+/*! Gallery Section */
+.gallery {
+  max-width: 75%;
+  height: 50rem;
+  margin: 15rem auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.gallery .rooms {
+  flex: 0.5;
+  position: relative;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery .rooms img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery .rooms:hover {
+  transform: scale(1.03);
+}
+
+.gallery .images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gallery .images .image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery .images .image:hover {
+  transform: scale(1.03);
+}
+
+.gallery .images .image img {
+  width: 100%;
+  height: 100%;
+}
