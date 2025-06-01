@@ -127,7 +127,7 @@ body {
 
 .book .book-room-contents .content {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
@@ -139,11 +139,6 @@ body {
 }
 
 .book .book-room-contents .content .header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
   margin: 1rem 0;
   text-align: start;
 }
@@ -162,10 +157,19 @@ body {
   gap: 1.5rem;
 }
 
-.book .book-room-contents .content .book-now {
+.book
+  .book-room-contents
+  .content
+  .adults-children
+  .adults-children-contents
+  .number {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+}
+
+.book .book-room-contents .content .book-now {
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -187,7 +191,7 @@ body {
 .gallery {
   max-width: 75%;
   height: 50rem;
-  margin: 15rem auto;
+  margin: 12rem auto;
   display: flex;
   gap: 2rem;
 }
@@ -235,4 +239,133 @@ body {
 .gallery .images .image img {
   width: 100%;
   height: 100%;
+}
+
+/*! Special Offers Section */
+.pricing .special-offers {
+  max-width: 75%;
+  margin: 8rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pricing .special-offers .title h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #65aef2;
+}
+
+.pricing .special-offers .view-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing .special-offers .view-all h2 {
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+
+.pricing .special-offers .view-all a {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  color: #65aef2;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.pricing .special-offers .view-all a:hover {
+  transform: scale(1.1);
+}
+
+.pricing .special-offers .description {
+  max-width: 70%;
+}
+
+.pricing .special-offers .description p {
+  font-size: 1.5rem;
+}
+
+.pricing .price-cards {
+  max-width: 75%;
+  margin: 5rem auto;
+  gap: 2rem;
+}
+
+.pricing .price-cards .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  transition: transform 0.3s ease;
+}
+
+.pricing .price-cards .card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.pricing .price-cards .card .card-content img {
+  transition: transform 0.3s ease;
+}
+
+.pricing .price-cards .card .card-content img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.pricing .price-cards .card .card-content p {
+  color: #5e5e5e;
+  font-weight: 600;
+}
+
+.pricing .price-cards .card .card-content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pricing .price-cards .card .card-content .title h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.pricing .price-cards .card .card-content .title .person {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.pricing .price-cards .card .card-content .price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.pricing .price-cards .card .card-content .price span {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.pricing .price-cards .card .card-content .price p {
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
 }
