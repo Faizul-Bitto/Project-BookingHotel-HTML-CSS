@@ -395,10 +395,11 @@ body {
 .footer .footer-content .newsletter {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   flex: 1;
   min-width: 300px;
   max-width: 45%;
+  padding-top: 3rem;
 }
 
 .footer .footer-content .newsletter h2 {
@@ -454,19 +455,21 @@ body {
 .footer .footer-right-side .footer-hotel-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
 }
 
 .footer .footer-right-side .footer-hotel-logo .logo-text-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .footer-right-side .footer-hotel-logo .logo-text-container h2 {
   color: white;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 0.8;
 }
 
 .footer .footer-right-side .footer-hotel-logo .logo-icon-container {
