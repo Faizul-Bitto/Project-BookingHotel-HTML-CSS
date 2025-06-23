@@ -18,6 +18,7 @@ body {
 .hero .hero-content img {
   width: 100%;
   height: 100vh;
+  object-fit: cover;
 }
 
 /*! Navbar Section */
@@ -31,6 +32,7 @@ body {
   background-color: white;
   border-radius: 1rem;
   z-index: 100;
+  padding: 0 1rem;
 }
 
 .hero .navbar .nav-links {
@@ -95,6 +97,7 @@ body {
 .book {
   max-width: 75%;
   margin: 10rem auto;
+  padding: 0 1rem;
 }
 
 .book .book-room {
@@ -109,12 +112,14 @@ body {
 .book .book-room h2 {
   font-size: 2rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .book .book-room p {
   font-size: 1rem;
   font-weight: 400;
   color: #5e5e5e;
+  text-align: center;
 }
 
 .book .book-room-contents {
@@ -123,6 +128,7 @@ body {
   justify-content: space-around;
   gap: 1.5rem;
   margin: 3rem 0;
+  flex-wrap: wrap;
 }
 
 .book .book-room-contents .content {
@@ -136,6 +142,9 @@ body {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .book .book-room-contents .content .header {
@@ -148,6 +157,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .book .book-room-contents .content .adults-children .adults-children-contents {
@@ -176,15 +186,12 @@ body {
   transition: all 0.3s ease;
   background-color: #65aef2;
   color: white;
-}
-
-.book .book-room-contents .content .book-now h1 {
-  font-size: 1.5rem;
-  font-weight: 500;
+  width: 100%;
+  text-align: center;
 }
 
 .book .book-room-contents .content:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /*! Gallery Section */
@@ -194,6 +201,9 @@ body {
   margin: 12rem auto;
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 1rem;
 }
 
 .gallery .rooms {
@@ -203,6 +213,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
+  min-width: 300px;
 }
 
 .gallery .rooms img {
@@ -222,6 +233,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
+  min-width: 300px;
 }
 
 .gallery .images .image {
@@ -239,6 +251,7 @@ body {
 .gallery .images .image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 /*! Special Offers Section */
@@ -248,6 +261,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .pricing .special-offers .title h3 {
@@ -260,6 +274,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .pricing .special-offers .view-all h2 {
@@ -274,8 +290,8 @@ body {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
-
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .pricing .special-offers .view-all a:hover {
@@ -293,18 +309,24 @@ body {
 .pricing .price-cards {
   max-width: 90%;
   margin: 5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .pricing .price-cards .card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
   border-radius: 2rem;
   overflow: hidden;
-
   transition: transform 0.3s ease;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .pricing .price-cards .card .card-content {
@@ -317,6 +339,10 @@ body {
 }
 
 .pricing .price-cards .card .card-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -390,6 +416,7 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 3rem;
+  padding: 0 1rem;
 }
 
 .footer .footer-content .newsletter {
@@ -453,33 +480,39 @@ body {
 }
 
 .footer .footer-right-side .footer-hotel-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer .footer-right-side .footer-hotel-logo .logo-text-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.footer .footer-right-side .footer-hotel-logo .logo-text-container h2 {
-  color: white;
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 0.8;
+.footer .footer-right-side .footer-hotel-logo .footer-logo-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
-.footer .footer-right-side .footer-hotel-logo .logo-icon-container {
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-right-side .footer-hotel-logo .logo-icon-container i {
+.footer .footer-right-side .footer-hotel-logo .footer-logo-icon i {
   color: #65aef2;
-  font-size: 2.5rem;
+  font-size: 3rem;
+}
+
+.footer .footer-right-side .footer-hotel-logo .footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.footer .footer-right-side .footer-hotel-logo .footer-logo-text h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .footer .footer-right-side .footer-nav-columns {
@@ -518,11 +551,346 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
 }
 
 .copyright p {
+  padding: 0;
+  border: none;
   color: white;
-  padding: 1.5rem 0;
-  border-top: 1px solid white;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+  .hero .navbar {
+    width: 90%;
+    top: 2rem;
+    height: 4rem;
+  }
+  .hero .navbar .nav-links .link {
+    font-size: 1.2rem;
+  }
+  .hero .navbar .nav-links .link .logo .logo-content h2 {
+    font-size: 1.5rem;
+  }
+  .hero .navbar .nav-links .link .logo .logo-icon {
+    font-size: 2.5rem;
+  }
+
+  .book {
+    max-width: 90%;
+    margin: 8rem auto;
+  }
+  .book .book-room-contents {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .book .book-room-contents .content {
+    min-width: unset;
+    flex-basis: 48%;
+  }
+
+  .gallery {
+    height: auto;
+    margin: 8rem auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery .rooms,
+  .gallery .images {
+    flex: none;
+    width: 100%;
+    max-width: 600px;
+  }
+  .gallery .images {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .pricing .special-offers {
+    margin: 6rem auto;
+  }
+  .pricing .special-offers .view-all h2 {
+    font-size: 3.5rem;
+  }
+  .pricing .special-offers .view-all a {
+    font-size: 1.5rem;
+  }
+  .pricing .special-offers .description {
+    max-width: 80%;
+  }
+  .pricing .special-offers .description p {
+    font-size: 1.3rem;
+  }
+
+  .pricing .price-cards .card {
+    flex-basis: 45%;
+  }
+
+  .footer .footer-content {
+    max-width: 90%;
+  }
+  .footer .footer-content .newsletter,
+  .footer .footer-content .footer-right-side {
+    max-width: 48%;
+    min-width: unset;
+  }
+  .footer .footer-right-side .footer-nav-columns {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .navbar {
+    width: 95%;
+    top: 1rem;
+    height: 3.5rem;
+  }
+  .hero .navbar .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .hero .navbar .nav-links .link {
+    font-size: 1rem;
+  }
+  .hero .navbar .nav-links .link .logo {
+    display: none;
+  }
+
+  .book {
+    margin: 5rem auto;
+  }
+  .book .book-room h2 {
+    font-size: 1.8rem;
+  }
+  .book .book-room p {
+    font-size: 0.9rem;
+  }
+  .book .book-room-contents {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .book .book-room-contents .content {
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+  }
+  .book .book-room-contents .content .header {
+    text-align: center;
+  }
+  .book .book-room-contents .content .adults-children {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gallery {
+    margin: 5rem auto;
+    gap: 1rem;
+  }
+  .gallery .rooms {
+    border-radius: 1.5rem;
+  }
+  .gallery .images {
+    gap: 1rem;
+    border-radius: 1rem;
+  }
+
+  .pricing .special-offers {
+    margin: 4rem auto;
+  }
+  .pricing .special-offers .view-all {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pricing .special-offers .view-all h2 {
+    font-size: 2.8rem;
+    text-align: left;
+  }
+  .pricing .special-offers .view-all a {
+    align-self: flex-start;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    background-color: #65aef2;
+    color: white;
+    font-size: 1.3rem;
+  }
+  .pricing .special-offers .description {
+    max-width: 100%;
+  }
+  .pricing .special-offers .description p {
+    font-size: 1.1rem;
+  }
+
+  .pricing .price-cards .card {
+    flex-basis: 90%;
+    max-width: 450px;
+  }
+  .pricing .price-cards .card .card-content .title h3 {
+    font-size: 1.3rem;
+  }
+  .pricing .price-cards .card .card-content .price span {
+    font-size: 2rem;
+  }
+
+  .footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .footer .footer-content .newsletter,
+  .footer .footer-content .footer-right-side {
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .footer .footer-content .newsletter h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer .footer-content .newsletter .input {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer .footer-content .newsletter .input input {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer .footer-content .newsletter .input button {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+    height: 4rem;
+    font-size: 1.1rem;
+  }
+
+  .footer .footer-right-side .footer-hotel-logo {
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer .footer-right-side .footer-hotel-logo .footer-logo-icon i {
+    font-size: 2.8rem;
+  }
+
+  .footer .footer-right-side .footer-hotel-logo .footer-logo-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .footer .footer-right-side .footer-nav-columns {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer .footer-right-side .footer-nav-columns .links-column ul {
+    align-items: center;
+  }
+
+  .footer .footer-right-side .footer-nav-columns .links-column ul li a {
+    font-size: 1.1rem;
+  }
+
+  .copyright {
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .copyright p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .navbar {
+    padding: 0 0.5rem;
+    height: 3rem;
+  }
+  .hero .navbar .nav-links .link {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .book .book-room h2 {
+    font-size: 1.6rem;
+  }
+  .book .book-room p {
+    font-size: 0.85rem;
+  }
+  .book .book-room-contents .content .header h5,
+  .book .book-room-contents .content .adults-children p,
+  .book .book-room-contents .content .adults-children span {
+    font-size: 0.9rem;
+  }
+  .book .book-room-contents .content .book-now h1 {
+    font-size: 1.3rem;
+  }
+
+  .gallery {
+    margin: 3rem auto;
+  }
+  .gallery .images {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing .special-offers {
+    margin: 3rem auto;
+  }
+  .pricing .special-offers .view-all h2 {
+    font-size: 2rem;
+  }
+  .pricing .special-offers .view-all a {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+  .pricing .special-offers .description p {
+    font-size: 1rem;
+  }
+
+  .pricing .price-cards .card .card-content p {
+    font-size: 0.9rem;
+  }
+  .pricing .price-cards .card .card-content .title h3 {
+    font-size: 1.2rem;
+  }
+  .pricing .price-cards .card .card-content .price span {
+    font-size: 1.8rem;
+  }
+  .pricing .price-cards .card .card-content .price p {
+    font-size: 0.9rem;
+  }
+
+  .footer .footer-content .newsletter h2 {
+    font-size: 1.6rem;
+  }
+  .footer .footer-content .newsletter .input input {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+  .footer .footer-content .newsletter .input button {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+  .footer .footer-right-side .footer-hotel-logo .footer-logo-text h2 {
+    font-size: 2.2rem;
+  }
+  .footer .footer-right-side .footer-hotel-logo .footer-logo-icon i {
+    font-size: 2.5rem;
+  }
+  .footer .footer-right-side .footer-nav-columns .links-column ul li a {
+    font-size: 1rem;
+  }
+  .copyright p {
+    font-size: 0.8rem;
+  }
 }
